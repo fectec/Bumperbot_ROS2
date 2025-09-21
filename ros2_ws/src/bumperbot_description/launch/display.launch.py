@@ -8,7 +8,6 @@ from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-
 def generate_launch_description():
     bumperbot_description_dir = get_package_share_directory("bumperbot_description")
 
@@ -36,7 +35,7 @@ def generate_launch_description():
         executable="rviz2",
         name="rviz2",
         output="screen",
-        arguments=["-d", os.path.join(bumperbot_description_dir, "rviz", "display.rviz")],
+        arguments=["-d", os.path.join(bumperbot_description_dir, "rviz", "display.rviz")]
     )
 
     return LaunchDescription([

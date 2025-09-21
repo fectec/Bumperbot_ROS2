@@ -10,7 +10,6 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-
 def generate_launch_description():
     bumperbot_description = get_package_share_directory("bumperbot_description")
 
@@ -60,7 +59,7 @@ def generate_launch_description():
         executable="create",
         output="screen",
         arguments=["-topic", "robot_description",
-                   "-name", "bumperbot"],
+                   "-name", "bumperbot"]
     )
 
     return LaunchDescription([
